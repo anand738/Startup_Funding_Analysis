@@ -10,7 +10,7 @@ st.set_page_config(layout="wide", page_title="Startup Funding Dashboard")
 # Load and preprocess data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('D:/Anand Gupta/Data Science Final/DS/startup_funding/startup_cleaned1.csv')
+    df = pd.read_csv('https://github.com/anand738/Startup_Funding_Analysis/blob/master/startup_cleaned1.csv')
     df['date'] = pd.to_datetime(df['date'], errors='coerce')
     df['month'] = df['date'].dt.month
     df['year'] = df['date'].dt.year
